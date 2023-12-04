@@ -1,5 +1,5 @@
 navigator.geolocation.getCurrentPosition(function (posicao) {
-    var url = "http://nominatim.openstreetmap.org/reverse?lat=" + posicao.coords.latitude + "&lon=" + posicao.coords.longitude + "&format=json&json_callback=preencherDados";
+    var url = "https://nominatim.openstreetmap.org/reverse?lat=" + posicao.coords.latitude + "&lon=" + posicao.coords.longitude + "&format=json&json_callback=preencherDados";
 
     var script = document.createElement('script');
     script.src = url;
