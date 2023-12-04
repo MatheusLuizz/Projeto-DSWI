@@ -1,41 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #333;
+    padding: 5px;
+    background-color: #999999;
     color: #fff;
 }
-
-#logo {
-    max-width: 100px;
-}
-
-/*
+.logo,
+.links,
+.btns,
 #location {
-    TODO
+    margin: 0 70px; /* Adiciona margens para espaçamento */
 }
-*/
 
+.logo {
+    order: 1;
+    width: 100px;
+    cursor: pointer;
+    margin-right: 250px;
+}
+.logo a img {
+    max-width: 100%;
+    height: auto;
+}
+.links {
+    order: 2;
+    margin-block: 400;
+}
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 3px;
     align-items: center;
-    padding: 10px;
-    background-color: #eee;
+    color: #202020;
+    flex-wrap: wrap;
 }
 
-nav a {
+.nav-itens {
+    list-style: none;
+    display: flex;
+}
+
+.nav-itens>li>a {
+    padding-left: 20px;
+    color: #202020;
     text-decoration: none;
-    color: #333;
+}
+#location {
+    order: 4;
+}
+
+.btns {
+    order: 3;
+}
+
+.login {
+    padding: 10px 40px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    color: #202020;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: 1s background;
+}
+
+.login:hover {
+    background-color: #c5c5c5;
+    transition: 1s background;
+}
+
+.cadastro {
+    padding: 10px 40px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #202020;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: 1s background;
+}
+
+.cadastro:hover {
+    background-color: #3d3d3d;
+    transition: 1s background;
 }
 
 section {
     padding: 20px;
+}
+@media screen and (max-width: 768px) {
+    .logo,
+    .links,
+    .btns,
+    #location {
+        margin: 10px 0; /* Adapta as margens para telas menores */
+    }
+
+    .nav-itens>li>a {
+        padding: 10px; /* Ajusta o espaçamento dos itens do menu */
+    }
 }
